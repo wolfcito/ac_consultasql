@@ -1,6 +1,7 @@
 
 package ec.edu.espe.arquitectura.ac_consultasql.model;
 
+import java.util.Date;
 import java.util.Objects;
 import org.bson.types.ObjectId;
 import org.mongodb.morphia.annotations.Entity;
@@ -29,7 +30,7 @@ public class Persona {
     private String nombres;
     
     @Property("fechaNacimiento")
-    private String fechaNacimiento;
+    private Date fechaNacimiento;
     
     @Property("codigoProvincia")
     private String codigoProvincia;
@@ -100,14 +101,6 @@ public class Persona {
         this.nombres = nombres;
     }
 
-    public String getFechaNacimiento() {
-        return fechaNacimiento;
-    }
-
-    public void setFechaNacimiento(String fechaNacimiento) {
-        this.fechaNacimiento = fechaNacimiento;
-    }
-
     public String getCodigoProvincia() {
         return codigoProvincia;
     }
@@ -130,6 +123,14 @@ public class Persona {
 
     public void setEstadoCivil(String estadoCivil) {
         this.estadoCivil = estadoCivil;
+    }
+
+    public Date getFechaNacimiento() {
+        return fechaNacimiento;
+    }
+
+    public void setFechaNacimiento(Date fechaNacimiento) {
+        this.fechaNacimiento = fechaNacimiento;
     }
     
 }
